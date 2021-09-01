@@ -13,19 +13,6 @@
         "oscp_advanced": false
     },
     {
-        "id": 321,
-        "name": "Proper",
-        "os": "Windows",
-        "release": "2021-03-13",
-        "difficulty": "Hard",
-        "free": true,
-        "recommended": false,
-        "retired": false,
-        "startingpoint": false,
-        "oscp_normal": false,
-        "oscp_advanced": false
-    },
-    {
         "id": 335,
         "name": "Schooled",
         "os": "Other",
@@ -83,19 +70,6 @@
         "os": "Linux",
         "release": "2021-05-15",
         "difficulty": "Medium",
-        "free": true,
-        "recommended": false,
-        "retired": false,
-        "startingpoint": false,
-        "oscp_normal": false,
-        "oscp_advanced": false
-    },
-    {
-        "id": 347,
-        "name": "Knife",
-        "os": "Linux",
-        "release": "2021-05-22",
-        "difficulty": "Easy",
         "free": true,
         "recommended": false,
         "retired": false,
@@ -247,10 +221,36 @@
         "oscp_advanced": false
     },
     {
+        "id": 372,
+        "name": "Developer",
+        "os": "Linux",
+        "release": "2021-08-21",
+        "difficulty": "Hard",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
         "id": 373,
         "name": "Previse",
         "os": "Linux",
         "release": "2021-08-07",
+        "difficulty": "Easy",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 374,
+        "name": "Horizontall",
+        "os": "Linux",
+        "release": "2021-08-28",
         "difficulty": "Easy",
         "free": true,
         "recommended": false,
@@ -273,10 +273,10 @@
         "oscp_advanced": false
     },
     {
-        "id": 344,
-        "name": "Love",
-        "os": "Windows",
-        "release": "2021-05-01",
+        "id": 347,
+        "name": "Knife",
+        "os": "Linux",
+        "release": "2021-05-22",
         "difficulty": "Easy",
         "free": true,
         "recommended": false,
@@ -2886,6 +2886,19 @@
         "oscp_advanced": false
     },
     {
+        "id": 321,
+        "name": "Proper",
+        "os": "Windows",
+        "release": "2021-03-13",
+        "difficulty": "Hard",
+        "free": false,
+        "recommended": false,
+        "retired": true,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
         "id": 323,
         "name": "Armageddon",
         "os": "Linux",
@@ -2923,6 +2936,19 @@
         "startingpoint": false,
         "oscp_normal": false,
         "oscp_advanced": true
+    },
+    {
+        "id": 344,
+        "name": "Love",
+        "os": "Windows",
+        "release": "2021-05-01",
+        "difficulty": "Easy",
+        "free": false,
+        "recommended": false,
+        "retired": true,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
     },
     {
         "id": 287,
