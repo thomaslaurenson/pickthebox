@@ -19,13 +19,10 @@ import {
   FormHelperText,
   Link,
   Divider,
-  TableContainer,
-  Table,
-  TableBody,
-  TableRow,
-  TableCell,
 } from '@material-ui/core'
 import GitHubButton from 'react-github-btn'
+
+import TargetBox from './components/targetBox'
 
 const useStyles = () => ({
   root: {
@@ -48,10 +45,6 @@ const useStyles = () => ({
   divider: {
     background: "#fff",
   },
-  tableCell: {
-    color: "#fff",
-    borderBottom: "none",
-  },
 });
 
 class App extends React.Component {
@@ -62,7 +55,7 @@ class App extends React.Component {
       // If the app is fetching JSON data
       loading: true,
       // All HTB machine data
-      pickaboxData: null,
+      machineData: null,
       // All HTB machine avatars in base64
       machineAvatars: null,
       // OSCP, OSCP Advanced, Retired, Recommended
@@ -81,12 +74,12 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    const URLs = ["pickabox_data.json", "machines_avatars.json"];
+    const URLs = ["machines_data.json", "machines_avatars.json"];
     const requests = URLs.map(URL => axios.get(URL).catch());
 
     try {
-      const [pickaboxData, machineAvatars] = await axios.all(requests);
-      this.setState({ pickaboxData: pickaboxData.data });
+      const [machineData, machineAvatars] = await axios.all(requests);
+      this.setState({ machineData: machineData.data });
       this.setState({ machineAvatars: machineAvatars.data });
     }
     catch (err) {
@@ -120,7 +113,7 @@ class App extends React.Component {
   };
 
   pickRandomBox() {
-    let boxes = [...this.state.pickaboxData];
+    let boxes = [...this.state.machineData];
 
     // Remove previous seen boxes (state: cycledBoxes)
     // TODO: Add in history and the ability to reset
@@ -283,49 +276,7 @@ class App extends React.Component {
                 </Box>
               ) : ("")}
 
-              {/* Target Box Information */}
-              {this.state.targetBox ? (
-                <Grid container spacing={2}>
-                  <Grid item xs={12} sm={6}>
-
-                    <Typography variant="h4" component="h2">
-                      <Box display="flex" justifyContent="center" fontWeight="fontWeightBold" m={1}>
-                        {this.state.targetBox["name"]}
-                      </Box>
-                    </Typography>
-
-                    <TableContainer >
-                      <Table aria-label="target machine">
-                        <TableBody>
-                          <TableRow key="os" >
-                            <TableCell component="th" scope="row" align="right" className={classes.tableCell}>Operating System:</TableCell>
-                            <TableCell align="left" className={classes.tableCell}>{this.state.targetBox["os"]}</TableCell>
-                          </TableRow>
-                          <TableRow key="difficulty" >
-                            <TableCell component="th" scope="row" align="right" className={classes.tableCell}>Difficulty:</TableCell>
-                            <TableCell align="left" className={classes.tableCell}>{this.state.targetBox["difficulty"]}</TableCell>
-                          </TableRow>
-                          <TableRow key="release">
-                            <TableCell component="th" scope="row" align="right" className={classes.tableCell}>Release:</TableCell>
-                            <TableCell align="left" className={classes.tableCell}>{this.state.targetBox["release"]}</TableCell>
-                          </TableRow>
-                        </TableBody>
-                      </Table>
-                    </TableContainer>
-
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <Box display="flex" justifyContent="center" alignItems="center" m={1}>
-                      <img
-                        alt={`Icon for ${this.state.targetBox["name"]}`}
-                        src={`data:image/png;base64,${this.state.machineAvatars[this.state.targetBox["id"]]}`}
-                      />
-                    </Box>
-
-
-                  </Grid>
-                </Grid>
-              ) : ("")}
+              <TargetBox targetBox={this.state.targetBox} machineAvatars={this.state.machineAvatars} />
 
             </Container>
           </React.Fragment>
