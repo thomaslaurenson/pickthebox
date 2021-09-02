@@ -26,10 +26,37 @@ const theme = createTheme({
       track: {
         opacity: 0.2,
         backgroundColor: "#fff",
-        "$checked$checked + &": {
-          opacity: 0.2,
-          backgroundColor: "#ccc"
+      }
+    },
+    MuiDivider: {
+      root: {
+        backgroundColor: "#fff",
+      }
+    },
+    MuiFormLabel: {
+      root: {
+        color: "#fff",
+        "&$focused": {
+          color: "#fff",
         }
+      }
+    },
+    MuiFormHelperText: {
+      root: {
+        color: "#141d2b",
+      }
+    },
+    MuiCheckbox: {
+      root: {
+        color: "#fff",
+      }
+    },
+    MuiTableCell: {
+      root: {
+        borderBottom: "none",
+      },
+      body: {
+        color: "#fff",
       }
     }
   }

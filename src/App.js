@@ -27,23 +27,12 @@ import TargetBox from './components/targetBox'
 const useStyles = () => ({
   root: {
     display: "flex",
+    minHeight: "100vh",
     backgroundColor: "#141d2b",
     color: "#fff"
   },
-  fontWhiteImportant: {
-    color: "#fff !important",
-  },
-  fontWhite: {
-    color: "#fff",
-  },
-  fullHeight: {
-    minHeight: "100vh",
-  },
   machineButton: {
     minWidth: "60%"
-  },
-  divider: {
-    background: "#fff",
   },
 });
 
@@ -175,7 +164,7 @@ class App extends React.Component {
         <div className={classes.root}>
           <React.Fragment>
             <CssBaseline />
-            <Grid container justifyContent="center" alignItems="center" className={classes.fullHeight}>
+            <Grid container justifyContent="center" alignItems="center">
               <Box display="flex" >
                 <CircularProgress />
               </Box>
@@ -188,7 +177,7 @@ class App extends React.Component {
         <div className={classes.root}>
           <React.Fragment>
             <CssBaseline />
-            <Container maxWidth="md" className={classes.fullHeight}>
+            <Container maxWidth="md">
               <Box display="flex" justifyContent="center" pt={3}>
                 <Typography variant="h2" component="h2">
                   <Box fontWeight="fontWeightBold" m={1}>
@@ -204,7 +193,7 @@ class App extends React.Component {
               </Box>
 
               <Box pt={2}>
-                <Divider className={classes.divider} />
+                <Divider />
               </Box>
 
               {/* Switches for machine selection */}
@@ -225,7 +214,7 @@ class App extends React.Component {
                 {/* Difficulty selection */}
                 <Box m={1} p={1}>
                   <FormControl required error={errorDifficulty} component="fieldset">
-                    <FormLabel component="legend" className={classes.fontWhiteImportant}>Machine Difficulty</FormLabel>
+                    <FormLabel component="legend">Machine Difficulty</FormLabel>
                     <FormGroup>
                       {["Very Easy", "Easy", "Medium", "Hard", "Insane"].map((difficulty, index) => (
                         <FormControlLabel
@@ -234,14 +223,14 @@ class App extends React.Component {
                         />
                       ))}
                     </FormGroup>
-                    <FormHelperText className={classes.fontWhite}>You must select at least one!</FormHelperText>
+                    <FormHelperText>You must select at least one!</FormHelperText>
                   </FormControl>
                 </Box>
 
                 {/* Operating system selection */}
                 <Box m={1} p={1}>
                   <FormControl required error={errorOS} component="fieldset">
-                    <FormLabel component="legend" className={classes.fontWhiteImportant}>Operating System</FormLabel>
+                    <FormLabel component="legend">Operating System</FormLabel>
                     <FormGroup>
                       {["Linux", "Windows", "Other"].map((os, index) => (
                         <FormControlLabel
@@ -250,19 +239,19 @@ class App extends React.Component {
                         />
                       ))}
                     </FormGroup>
-                    <FormHelperText className={classes.fontWhite}>You must select at least one!</FormHelperText>
+                    <FormHelperText>You must select at least one!</FormHelperText>
                   </FormControl>
                 </Box>
               </Box>
 
-              <Box display="flex" justifyContent="center" ml={5} mr={5} >
+              <Box display="flex" justifyContent="center" ml={5} mr={5}>
                 <Button className={classes.machineButton} variant="contained" color="primary" size="large" onClick={() => this.pickRandomBox()}>
                   Pick The Box
                 </Button>
               </Box>
 
               <Box pt={4} pb={3}>
-                <Divider className={classes.divider} />
+                <Divider />
               </Box>
 
               {/* Error panel */}
