@@ -15,8 +15,9 @@ const theme = createTheme({
     }
   },
   fontFamily: [
-    'Roboto',
-    'serif',
+    "Roboto",
+    "serif",
+    "monospace",
   ].join(','),
   overrides: {
     MuiSwitch: {
@@ -54,6 +55,8 @@ const theme = createTheme({
     MuiTableCell: {
       root: {
         borderBottom: "none",
+        padding: "8px",
+        fontFamily: "monospace",
       },
       body: {
         color: "#fff",
