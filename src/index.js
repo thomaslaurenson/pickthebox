@@ -7,6 +7,7 @@ import '@fontsource/roboto';
 
 const theme = createTheme({
   palette: {
+    type: "dark",
     primary: {
       main: "#9fef00"
     },
@@ -27,6 +28,17 @@ const theme = createTheme({
       track: {
         opacity: 0.2,
         backgroundColor: "#fff",
+      }
+    },
+    MuiTab: {
+      wrapper: {
+        color: "#fff",
+      },
+      root: {
+        background: "#1a2332",
+        "&:hover": {
+          backgroundColor: "#141d2b",
+        }
       }
     },
     MuiDivider: {
@@ -61,7 +73,23 @@ const theme = createTheme({
       body: {
         color: "#fff",
       }
-    }
+    },
+    MuiDataGrid: {
+      root: {
+        color: "#fff",
+        border: "none",
+      }
+    },
+    MuiSvgIcon: {
+      root: {
+        color: "#9fef00",
+      }
+    },
+    MuiTablePagination: {
+      caption: {
+        color: "#9fef00",
+      }
+    },
   }
 });
 
@@ -71,7 +99,7 @@ ReactDOM.render(
       <App />
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 //ReactDOM.render(<App /></ThemeProvider>,document.getElementById("root"));
