@@ -94,7 +94,7 @@ class DataGridDemo extends React.Component {
             }}
             rows={this.props.machineData}
             columns={columns}
-            pageSize={20}
+            pageSize={100}
             rowsPerPageOptions={[20]}
             checkboxSelection={false}
           />

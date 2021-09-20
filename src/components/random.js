@@ -183,7 +183,7 @@ class RandomMachines extends React.Component {
               </Box>
             </Box>
 
-            <Box display="flex" justifyContent="center" ml={5} mr={5} pb={2}>
+            <Box display="flex" justifyContent="center" ml={5} mr={5} pb={4}>
               <Button className={classes.machineButton} variant="contained" color="primary" size="large" onClick={() => this.pickRandomBox()}>
                 Pick The Box
               </Button>
@@ -192,7 +192,7 @@ class RandomMachines extends React.Component {
             {/* Error panel */}
             {this.state.errorNoMachine ? (
               <Box display="flex" justifyContent="center" m={2} p={2}>
-                <Typography variant="h4" component="h2" >
+                <Typography variant="h4" component="h2" color="error" align="center">
                   <Box fontWeight="fontWeightBold" m={1}>
                     Error: No machine found using those specifications!
                   </Box>
