@@ -1,6 +1,6 @@
 import React from "react";
 
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@mui/styles";
 import {
   CssBaseline,
   Container,
@@ -14,7 +14,7 @@ import {
   FormLabel,
   Checkbox,
   FormHelperText,
-} from "@material-ui/core"
+} from "@mui/material"
 
 import TargetMachine from "./target"
 

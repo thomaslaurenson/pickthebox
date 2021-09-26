@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@mui/styles";
 import {
   CssBaseline,
   Container,
@@ -11,7 +11,7 @@ import {
   AppBar,
   Tabs,
   Tab,
-} from "@material-ui/core"
+} from "@mui/material"
 
 import Header from "./components/header"
 import RandomMachines from "./components/random"

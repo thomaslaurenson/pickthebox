@@ -1,11 +1,11 @@
 import React from "react";
 
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@mui/styles";
 import {
   Box,
   Typography,
   Link,
-} from "@material-ui/core"
+} from "@mui/material"
 import GitHubButton from "react-github-btn"
 
 class Header extends React.Component {

@@ -1,10 +1,9 @@
 import * as React from "react";
-import { DataGrid, GridToolbar } from "@material-ui/data-grid";
-
-import { withStyles } from "@material-ui/core/styles";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { withStyles } from "@mui/styles";
 import {
   Box,
-} from "@material-ui/core"
+} from "@mui/material"
 
 const useStyles = () => ({
 

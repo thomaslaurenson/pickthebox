@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createTheme, ThemeProvider } from "@material-ui/core";
+import { createTheme, adaptV4Theme, ThemeProvider } from "@mui/material";
 import '@fontsource/roboto';
 
-const theme = createTheme({
+const theme = createTheme(adaptV4Theme({
   palette: {
     type: "dark",
     primary: {
@@ -91,7 +91,7 @@ const theme = createTheme({
       }
     },
   }
-});
+}));
 
 ReactDOM.render(
   <React.StrictMode>
