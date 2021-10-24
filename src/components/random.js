@@ -200,7 +200,7 @@ class RandomMachines extends React.Component {
               </Box>
             ) : ("")}
 
-            <TargetMachine targetBox={this.state.targetBox} machineAvatars={this.props.machineAvatars} />
+            <TargetMachine targetBox={this.state.targetBox} machineAvatars={this.props.machineAvatars} machineTypesIcons={this.props.machineTypesIcons}/>
 
           </Container>
         </React.Fragment>

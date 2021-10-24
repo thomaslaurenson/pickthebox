@@ -72,6 +72,8 @@ class App extends React.Component {
       machineData: null,
       // All HTB machine avatars in base64
       machineAvatars: null,
+      // All HTB machine types (OS) avatars in base64
+      machineTypesIcons: null,
       // Selected tab index
       value: 0,
     }
@@ -82,13 +84,14 @@ class App extends React.Component {
   };
 
   async componentDidMount() {
-    const URLs = ["machines_data.json", "machines_avatars.json"];
+    const URLs = ["machines_data.json", "machines_avatars.json", "machines_types.json"];
     const requests = URLs.map(URL => axios.get(URL).catch());
 
     try {
-      const [machineData, machineAvatars] = await axios.all(requests);
+      const [machineData, machineAvatars, machineTypesIcons] = await axios.all(requests);
       this.setState({ machineData: machineData.data });
       this.setState({ machineAvatars: machineAvatars.data });
+      this.setState({ machineTypesIcons: machineTypesIcons.data });
     }
     catch (err) {
       console.log(err.message);
@@ -134,7 +137,7 @@ class App extends React.Component {
                 </Tabs>
               </AppBar>
               <TabPanel value={this.state.value} index={0} dir={theme.direction}>
-                <RandomMachines machineData={this.state.machineData} machineAvatars={this.state.machineAvatars} />
+                <RandomMachines machineData={this.state.machineData} machineAvatars={this.state.machineAvatars} machineTypesIcons={this.state.machineTypesIcons} />
               </TabPanel>
               <TabPanel value={this.state.value} index={1} dir={theme.direction}>
                 <DataGridDemo machineData={this.state.machineData} />
