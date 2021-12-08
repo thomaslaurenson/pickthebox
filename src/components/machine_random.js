@@ -16,7 +16,7 @@ import {
   FormHelperText,
 } from "@mui/material"
 
-import TargetMachine from "./target"
+import TargetMachine from "./machine_random_target"
 
 const useStyles = () => ({
   root: {
@@ -200,7 +200,7 @@ class RandomMachines extends React.Component {
               </Box>
             ) : ("")}
 
-            <TargetMachine targetBox={this.state.targetBox} machineAvatars={this.props.machineAvatars} machineTypesIcons={this.props.machineTypesIcons}/>
+            <TargetMachine targetBox={this.state.targetBox} machineAvatars={this.props.machineAvatars} machineTypesIcons={this.props.machineTypesIcons} />
 
           </Container>
         </React.Fragment>

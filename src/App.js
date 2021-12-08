@@ -12,10 +12,11 @@ import {
   Tabs,
   Tab,
 } from "@mui/material"
-
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
 import Header from "./components/header"
-import RandomMachines from "./components/random"
-import DataGridDemo from "./components/list"
+import RandomMachines from "./components/machine_random"
+import DataGridDemo from "./components/machine_list"
 
 const useStyles = () => ({
   root: {
@@ -100,50 +101,54 @@ class App extends React.Component {
   }
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes } = this.props;
 
     if (this.state.loading) {
       return (
         <div className={classes.root}>
-          <React.Fragment>
-            <CssBaseline />
-            <Grid container justifyContent="center" alignItems="center">
-              <Box display="flex" >
-                <CircularProgress />
-              </Box>
-            </Grid>
-          </React.Fragment>
+          <ThemeProvider theme={theme}>
+            <React.Fragment>
+              <CssBaseline />
+              <Grid container justifyContent="center" alignItems="center">
+                <Box display="flex" >
+                  <CircularProgress />
+                </Box>
+              </Grid>
+            </React.Fragment>
+          </ThemeProvider>
         </div>
       )
     } else {
       return (
         <div className={classes.root}>
-          <React.Fragment>
-            <CssBaseline />
-            <Container maxWidth="lg">
-              <Header />
+          <ThemeProvider theme={theme}>
+            <React.Fragment>
+              <CssBaseline />
+              <Container maxWidth="lg">
+                <Header />
 
-              <AppBar position="static">
-                <Tabs
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                  indicatorColor="primary"
-                  textColor="primary"
-                  variant="fullWidth"
-                  aria-label="select from random or list"
-                >
-                  <Tab label="Random" {...a11yProps(0)} />
-                  <Tab label="List" {...a11yProps(1)} />
-                </Tabs>
-              </AppBar>
-              <TabPanel value={this.state.value} index={0} dir={theme.direction}>
-                <RandomMachines machineData={this.state.machineData} machineAvatars={this.state.machineAvatars} machineTypesIcons={this.state.machineTypesIcons} />
-              </TabPanel>
-              <TabPanel value={this.state.value} index={1} dir={theme.direction}>
-                <DataGridDemo machineData={this.state.machineData} />
-              </TabPanel>
-            </Container>
-          </React.Fragment>
+                <AppBar position="static">
+                  <Tabs
+                    value={this.state.value}
+                    onChange={this.handleChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    variant="fullWidth"
+                    aria-label="select from random or list"
+                  >
+                    <Tab label="Random" {...a11yProps(0)} />
+                    <Tab label="List" {...a11yProps(1)} />
+                  </Tabs>
+                </AppBar>
+                <TabPanel value={this.state.value} index={0} dir={theme.direction}>
+                  <RandomMachines machineData={this.state.machineData} machineAvatars={this.state.machineAvatars} machineTypesIcons={this.state.machineTypesIcons} />
+                </TabPanel>
+                <TabPanel value={this.state.value} index={1} dir={theme.direction}>
+                  <DataGridDemo machineData={this.state.machineData} />
+                </TabPanel>
+              </Container>
+            </React.Fragment>
+          </ThemeProvider>
         </div >
       );
     }
