@@ -1,23 +1,21 @@
 {
   "files": {
-    "main.js": "/pickthebox/static/js/main.ca269f0e.chunk.js",
-    "main.js.map": "/pickthebox/static/js/main.ca269f0e.chunk.js.map",
-    "runtime-main.js": "/pickthebox/static/js/runtime-main.b9ced235.js",
-    "runtime-main.js.map": "/pickthebox/static/js/runtime-main.b9ced235.js.map",
+    "main.js": "/pickthebox/static/js/main.836604c0.chunk.js",
+    "main.js.map": "/pickthebox/static/js/main.836604c0.chunk.js.map",
+    "runtime-main.js": "/pickthebox/static/js/runtime-main.0da14f32.js",
+    "runtime-main.js.map": "/pickthebox/static/js/runtime-main.0da14f32.js.map",
     "static/css/2.fb76de82.chunk.css": "/pickthebox/static/css/2.fb76de82.chunk.css",
-    "static/js/2.32109c4a.chunk.js": "/pickthebox/static/js/2.32109c4a.chunk.js",
-    "static/js/2.32109c4a.chunk.js.map": "/pickthebox/static/js/2.32109c4a.chunk.js.map",
-    "static/js/3.f1e073de.chunk.js": "/pickthebox/static/js/3.f1e073de.chunk.js",
-    "static/js/3.f1e073de.chunk.js.map": "/pickthebox/static/js/3.f1e073de.chunk.js.map",
+    "static/js/2.28182702.chunk.js": "/pickthebox/static/js/2.28182702.chunk.js",
+    "static/js/2.28182702.chunk.js.map": "/pickthebox/static/js/2.28182702.chunk.js.map",
     "index.html": "/pickthebox/index.html",
     "static/css/2.fb76de82.chunk.css.map": "/pickthebox/static/css/2.fb76de82.chunk.css.map",
-    "static/js/2.32109c4a.chunk.js.LICENSE.txt": "/pickthebox/static/js/2.32109c4a.chunk.js.LICENSE.txt",
+    "static/js/2.28182702.chunk.js.LICENSE.txt": "/pickthebox/static/js/2.28182702.chunk.js.LICENSE.txt",
     "static/media/index.css": "/pickthebox/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.b9ced235.js",
+    "static/js/runtime-main.0da14f32.js",
     "static/css/2.fb76de82.chunk.css",
-    "static/js/2.32109c4a.chunk.js",
-    "static/js/main.ca269f0e.chunk.js"
+    "static/js/2.28182702.chunk.js",
+    "static/js/main.836604c0.chunk.js"
   ]
 }
