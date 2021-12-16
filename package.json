@@ -4,21 +4,21 @@
   "homepage": "https://www.thomaslaurenson.com/pickthebox",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.7.0",
+    "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@fontsource/roboto": "^4.5.0",
-    "@mui/material": "^5.2.2",
-    "@mui/styles": "^5.2.2",
-    "@mui/x-data-grid": "^5.1.0",
-    "@testing-library/jest-dom": "^5.14.1",
+    "@mui/material": "^5.2.4",
+    "@mui/styles": "^5.2.3",
+    "@mui/x-data-grid": "^5.2.0",
+    "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.4.1",
+    "@testing-library/user-event": "^13.5.0",
     "axios": "^0.24.0",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-github-btn": "^1.2.1",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.0",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
@@ -48,7 +48,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint": "^8.4.1",
+    "eslint-plugin-react": "^7.27.1"
   }
 }
