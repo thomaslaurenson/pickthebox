@@ -1,11 +1,128 @@
 [
     {
+        "id": 432,
+        "name": "Paper",
+        "os": "Linux",
+        "release": "2022-02-05",
+        "difficulty": "Easy",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 440,
+        "name": "Pressed",
+        "os": "Linux",
+        "release": "2022-02-03",
+        "difficulty": "Hard",
+        "free": true,
+        "recommended": false,
+        "retired": true,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 441,
+        "name": "Unified",
+        "os": "Linux",
+        "release": "2022-02-02",
+        "difficulty": "Very Easy",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "startingpoint": true,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 437,
+        "name": "Flustered",
+        "os": "Linux",
+        "release": "2022-01-31",
+        "difficulty": "Medium",
+        "free": false,
+        "recommended": false,
+        "retired": true,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 431,
+        "name": "Scanned",
+        "os": "Linux",
+        "release": "2022-01-29",
+        "difficulty": "Insane",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 429,
+        "name": "Meta",
+        "os": "Linux",
+        "release": "2022-01-22",
+        "difficulty": "Medium",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 427,
+        "name": "AdmirerToo",
+        "os": "Linux",
+        "release": "2022-01-15",
+        "difficulty": "Hard",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 430,
+        "name": "NodeBlog",
+        "os": "Linux",
+        "release": "2022-01-10",
+        "difficulty": "Easy",
+        "free": false,
+        "recommended": false,
+        "retired": true,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 423,
+        "name": "Pandora",
+        "os": "Linux",
+        "release": "2022-01-08",
+        "difficulty": "Easy",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "startingpoint": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
         "id": 428,
         "name": "LogForge",
         "os": "Linux",
         "release": "2021-12-23",
         "difficulty": "Medium",
-        "free": true,
+        "free": false,
         "recommended": false,
         "retired": true,
         "startingpoint": false,
@@ -514,7 +631,7 @@
         "difficulty": "Medium",
         "free": true,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
         "oscp_advanced": false
@@ -540,7 +657,7 @@
         "difficulty": "Easy",
         "free": true,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
         "oscp_advanced": false
@@ -564,9 +681,9 @@
         "os": "Linux",
         "release": "2021-08-21",
         "difficulty": "Hard",
-        "free": true,
+        "free": false,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
         "oscp_advanced": false
@@ -579,7 +696,7 @@
         "difficulty": "Insane",
         "free": true,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
         "oscp_advanced": false
@@ -590,9 +707,9 @@
         "os": "Linux",
         "release": "2021-08-07",
         "difficulty": "Easy",
-        "free": true,
+        "free": false,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
         "oscp_advanced": false
@@ -603,7 +720,7 @@
         "os": "Linux",
         "release": "2021-07-31",
         "difficulty": "Medium",
-        "free": true,
+        "free": false,
         "recommended": false,
         "retired": true,
         "startingpoint": false,
@@ -634,7 +751,7 @@
         "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
-        "oscp_advanced": false
+        "oscp_advanced": true
     },
     {
         "id": 358,
@@ -646,7 +763,7 @@
         "recommended": false,
         "retired": true,
         "startingpoint": false,
-        "oscp_normal": false,
+        "oscp_normal": true,
         "oscp_advanced": false
     },
     {
@@ -659,7 +776,7 @@
         "recommended": false,
         "retired": true,
         "startingpoint": false,
-        "oscp_normal": false,
+        "oscp_normal": true,
         "oscp_advanced": false
     },
     {
@@ -681,7 +798,7 @@
         "os": "Linux",
         "release": "2021-06-19",
         "difficulty": "Hard",
-        "free": true,
+        "free": false,
         "recommended": false,
         "retired": true,
         "startingpoint": false,
@@ -737,7 +854,7 @@
         "recommended": false,
         "retired": true,
         "startingpoint": false,
-        "oscp_normal": false,
+        "oscp_normal": true,
         "oscp_advanced": false
     },
     {
@@ -750,7 +867,7 @@
         "recommended": false,
         "retired": true,
         "startingpoint": false,
-        "oscp_normal": false,
+        "oscp_normal": true,
         "oscp_advanced": false
     },
     {
@@ -776,7 +893,7 @@
         "recommended": false,
         "retired": true,
         "startingpoint": false,
-        "oscp_normal": false,
+        "oscp_normal": true,
         "oscp_advanced": false
     },
     {
@@ -790,7 +907,7 @@
         "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
-        "oscp_advanced": false
+        "oscp_advanced": true
     },
     {
         "id": 340,
@@ -920,7 +1037,7 @@
         "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
-        "oscp_advanced": false
+        "oscp_advanced": true
     },
     {
         "id": 315,
@@ -945,7 +1062,7 @@
         "recommended": false,
         "retired": true,
         "startingpoint": false,
-        "oscp_normal": false,
+        "oscp_normal": true,
         "oscp_advanced": false
     },
     {
@@ -1140,8 +1257,8 @@
         "recommended": false,
         "retired": true,
         "startingpoint": false,
-        "oscp_normal": false,
-        "oscp_advanced": true
+        "oscp_normal": true,
+        "oscp_advanced": false
     },
     {
         "id": 286,
@@ -1674,7 +1791,7 @@
         "retired": true,
         "startingpoint": false,
         "oscp_normal": false,
-        "oscp_advanced": false
+        "oscp_advanced": true
     },
     {
         "id": 222,
