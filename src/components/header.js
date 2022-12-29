@@ -1,6 +1,4 @@
 import React from "react";
-
-import { withStyles } from "@mui/styles";
 import {
   Box,
   Typography,
@@ -31,4 +29,4 @@ class Header extends React.Component {
   }
 }
 
-export default withStyles({ withTheme: true })(Header);
+export default (Header);

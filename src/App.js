@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import { withStyles } from "@mui/styles";
+import { css } from '@emotion/react';
 import {
   CssBaseline,
   Container,
@@ -17,17 +17,6 @@ import theme from './theme';
 import Header from "./components/header"
 import RandomMachines from "./components/machine_random"
 import DataGridDemo from "./components/machine_list"
-
-const useStyles = () => ({
-  root: {
-    display: "flex",
-    minHeight: "100vh",
-    backgroundColor: "#141d2b",
-  },
-  machineButton: {
-    minWidth: "60%"
-  },
-});
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -101,11 +90,13 @@ class App extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
-
     if (this.state.loading) {
       return (
-        <div className={classes.root}>
+        <Container css={css`
+          display: flex;
+          minHeight: 100vh;
+          backgroundColor: #141d2b;
+        `}>
           <ThemeProvider theme={theme}>
             <React.Fragment>
               <CssBaseline />
@@ -116,43 +107,45 @@ class App extends React.Component {
               </Grid>
             </React.Fragment>
           </ThemeProvider>
-        </div>
+        </Container>
       )
     } else {
       return (
-        <div className={classes.root}>
+        <Container css={css`
+          display: flex;
+          minHeight: 100vh;
+          backgroundColor: #141d2b;
+        `}>
           <ThemeProvider theme={theme}>
-            <React.Fragment>
-              <CssBaseline />
-              <Container maxWidth="lg">
-                <Header />
+            <CssBaseline />
+            <Container maxWidth="lg">
+              <Header />
 
-                <AppBar position="static">
-                  <Tabs
-                    value={this.state.value}
-                    onChange={this.handleChange}
-                    indicatorColor="primary"
-                    textColor="primary"
-                    variant="fullWidth"
-                    aria-label="select from random or list"
-                  >
-                    <Tab label="Random" {...a11yProps(0)} />
-                    <Tab label="List" {...a11yProps(1)} />
-                  </Tabs>
-                </AppBar>
-                <TabPanel value={this.state.value} index={0} dir={theme.direction}>
-                  <RandomMachines machineData={this.state.machineData} machineAvatars={this.state.machineAvatars} machineTypesIcons={this.state.machineTypesIcons} />
-                </TabPanel>
-                <TabPanel value={this.state.value} index={1} dir={theme.direction}>
-                  <DataGridDemo machineData={this.state.machineData} />
-                </TabPanel>
-              </Container>
-            </React.Fragment>
+              <AppBar position="static">
+                <Tabs
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  indicatorColor="primary"
+                  textColor="primary"
+                  variant="fullWidth"
+                  aria-label="select from random or list"
+                >
+                  <Tab label="Random" {...a11yProps(0)} />
+                  <Tab label="List" {...a11yProps(1)} />
+                </Tabs>
+              </AppBar>
+              <TabPanel value={this.state.value} index={0} dir={theme.direction}>
+                <RandomMachines machineData={this.state.machineData} machineAvatars={this.state.machineAvatars} machineTypesIcons={this.state.machineTypesIcons} />
+              </TabPanel>
+              <TabPanel value={this.state.value} index={1} dir={theme.direction}>
+                <DataGridDemo machineData={this.state.machineData} />
+              </TabPanel>
+            </Container>
           </ThemeProvider>
-        </div >
+        </Container>
       );
     }
   }
 }
 
-export default withStyles(useStyles, { withTheme: true })(App);
+export default (App);

@@ -1,6 +1,5 @@
 import React from "react";
-
-import { withStyles } from "@mui/styles";
+import { css } from '@emotion/react';
 import {
   CssBaseline,
   Container,
@@ -15,17 +14,7 @@ import {
   Checkbox,
   FormHelperText,
 } from "@mui/material"
-
 import TargetMachine from "./machine_random_target"
-
-const useStyles = () => ({
-  root: {
-    display: "flex",
-  },
-  machineButton: {
-    minWidth: "60%"
-  },
-});
 
 class RandomMachines extends React.Component {
   constructor(props) {
@@ -125,89 +114,85 @@ class RandomMachines extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
     const errorOS = this.state.os.filter((v) => v).length === 0;
     const errorDifficulty = this.state.difficulty.filter((v) => v).length === 0;
 
     return (
-      <div className={classes.root}>
-        <React.Fragment>
-          <CssBaseline />
-          <Container maxWidth="md">
+      <React.Fragment>
+        <CssBaseline />
+        <Container maxWidth="md">
 
-            {/* Switches for machine selection */}
-            <Box display="flex" justifyContent="center" ml={1} mr={1} p={1}>
-              <Box m={1} p={1}>
-                <FormGroup row>
-                  {["OSCP", "OSCP Advanced", "Retired", "Recommended"].map((title, index) => (
+          {/* Switches for machine selection */}
+          <Box display="flex" justifyContent="center" ml={1} mr={1} p={1}>
+            <Box m={1} p={1}>
+              <FormGroup row>
+                {["OSCP", "OSCP Advanced", "Retired", "Recommended"].map((title, index) => (
+                  <FormControlLabel
+                    key={index} control={<Switch checked={this.state.selections[index]} onChange={this.handleSwitchChange} name={index.toString()} color="primary" />}
+                    label={title}
+                  />
+                ))}
+              </FormGroup>
+            </Box>
+          </Box>
+
+          <Box display="flex" justifyContent="center"  >
+            {/* Difficulty selection */}
+            <Box m={1} p={1}>
+              <FormControl required error={errorDifficulty} component="fieldset">
+                <FormLabel component="legend">Machine Difficulty</FormLabel>
+                <FormGroup>
+                  {["Very Easy", "Easy", "Medium", "Hard", "Insane"].map((difficulty, index) => (
                     <FormControlLabel
-                      key={index} control={<Switch checked={this.state.selections[index]} onChange={this.handleSwitchChange} name={index.toString()} color="primary" />}
-                      label={title}
+                      key={index} control={<Checkbox checked={this.state.difficulty[index]} onChange={this.handleChangeDifficulty} name={index.toString()} color="primary" />}
+                      label={difficulty}
                     />
                   ))}
                 </FormGroup>
-              </Box>
+                <FormHelperText>You must select at least one!</FormHelperText>
+              </FormControl>
             </Box>
 
-            <Box display="flex" justifyContent="center"  >
-              {/* Difficulty selection */}
-              <Box m={1} p={1}>
-                <FormControl required error={errorDifficulty} component="fieldset">
-                  <FormLabel component="legend">Machine Difficulty</FormLabel>
-                  <FormGroup>
-                    {["Very Easy", "Easy", "Medium", "Hard", "Insane"].map((difficulty, index) => (
-                      <FormControlLabel
-                        key={index} control={<Checkbox checked={this.state.difficulty[index]} onChange={this.handleChangeDifficulty} name={index.toString()} color="primary" />}
-                        label={difficulty}
-                      />
-                    ))}
-                  </FormGroup>
-                  <FormHelperText>You must select at least one!</FormHelperText>
-                </FormControl>
-              </Box>
-
-              {/* Operating system selection */}
-              <Box m={1} p={1}>
-                <FormControl required error={errorOS} component="fieldset">
-                  <FormLabel component="legend">Operating System</FormLabel>
-                  <FormGroup>
-                    {["Linux", "Windows", "Other"].map((os, index) => (
-                      <FormControlLabel
-                        key={index} control={<Checkbox checked={this.state.os[index]} onChange={this.handleChangeOS} name={index.toString()} color="primary" />}
-                        label={os}
-                      />
-                    ))}
-                  </FormGroup>
-                  <FormHelperText>You must select at least one!</FormHelperText>
-                </FormControl>
-              </Box>
+            {/* Operating system selection */}
+            <Box m={1} p={1}>
+              <FormControl required error={errorOS} component="fieldset">
+                <FormLabel component="legend">Operating System</FormLabel>
+                <FormGroup>
+                  {["Linux", "Windows", "Other"].map((os, index) => (
+                    <FormControlLabel
+                      key={index} control={<Checkbox checked={this.state.os[index]} onChange={this.handleChangeOS} name={index.toString()} color="primary" />}
+                      label={os}
+                    />
+                  ))}
+                </FormGroup>
+                <FormHelperText>You must select at least one!</FormHelperText>
+              </FormControl>
             </Box>
+          </Box>
 
-            <Box display="flex" justifyContent="center" ml={5} mr={5} pb={4}>
-              <Button className={classes.machineButton} variant="contained" color="primary" size="large" onClick={() => this.pickRandomBox()}>
-                Pick The Box
-              </Button>
+          <Box display="flex" justifyContent="center" ml={5} mr={5} pb={4}>
+            <Button css={css`minWidth: 60%;`} variant="contained" color="primary" size="large" onClick={() => this.pickRandomBox()}>
+              Pick The Box
+            </Button>
+          </Box>
+
+          {/* Error panel */}
+          {this.state.errorNoMachine ? (
+            <Box display="flex" justifyContent="center" m={2} p={2}>
+              <Typography variant="h4" component="h2" color="error" align="center">
+                <Box fontWeight="fontWeightBold" m={1}>
+                  Error: No machine found using those specifications!
+                </Box>
+              </Typography>
             </Box>
+          ) : ("")}
 
-            {/* Error panel */}
-            {this.state.errorNoMachine ? (
-              <Box display="flex" justifyContent="center" m={2} p={2}>
-                <Typography variant="h4" component="h2" color="error" align="center">
-                  <Box fontWeight="fontWeightBold" m={1}>
-                    Error: No machine found using those specifications!
-                  </Box>
-                </Typography>
-              </Box>
-            ) : ("")}
+          <TargetMachine targetBox={this.state.targetBox} machineAvatars={this.props.machineAvatars} machineTypesIcons={this.props.machineTypesIcons} />
 
-            <TargetMachine targetBox={this.state.targetBox} machineAvatars={this.props.machineAvatars} machineTypesIcons={this.props.machineTypesIcons} />
-
-          </Container>
-        </React.Fragment>
-      </div >
+        </Container>
+      </React.Fragment>
     );
   }
 }
 
-
-export default withStyles(useStyles, { withTheme: true })(RandomMachines);
+export default (RandomMachines);

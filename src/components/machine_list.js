@@ -1,13 +1,8 @@
 import * as React from "react";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { withStyles } from "@mui/styles";
 import {
   Box,
 } from "@mui/material"
-
-const useStyles = () => ({
-
-});
 
 const columns = [
   {
@@ -82,8 +77,6 @@ class DataGridDemo extends React.Component {
 
 
   render() {
-    // const { classes } = this.props;
-
     return (
       <Box display="flex" alignItems="center" justifyContent="center" pt={3} pb={3}>
         <div style={{ height: "65vh", width: "100%" }}>
@@ -103,4 +96,4 @@ class DataGridDemo extends React.Component {
   }
 }
 
-export default withStyles(useStyles, { withTheme: true })(DataGridDemo);
+export default (DataGridDemo);

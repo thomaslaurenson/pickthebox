@@ -1,6 +1,5 @@
 import React from "react";
-
-import { withStyles } from "@mui/styles";
+import { css } from '@emotion/react';
 import {
   Grid,
   Box,
@@ -12,28 +11,17 @@ import {
   TableCell,
 } from "@mui/material"
 
-const useStyles = () => ({
-  root: {
-    paddingBottom: "20px",
-  },
-  stripedRow: {
-    backgroundColor: "#1a2332",
-  }
-});
-
 class TargetBox extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    const { classes } = this.props;
-
     return (
       <React.Fragment>
 
         {/* Target Box Information */}
         {this.props.targetBox ? (
-          <Grid container spacing={2} justifyContent="center" alignItems="center" className={classes.root}>
+          <Grid container spacing={2} justifyContent="center" alignItems="center">
 
             {/* Machine avatar */}
             <Grid item xs={12} sm={6}>
@@ -54,7 +42,8 @@ class TargetBox extends React.Component {
                       <TableRow key="name">
                         <TableCell colSpan={2} align="center"><Typography variant="h4" component="h2"><Box display="flex" fontWeight="fontWeightBold"></Box>{this.props.targetBox["name"]}</Typography></TableCell>
                       </TableRow>
-                      <TableRow key="os" className={classes.stripedRow}>
+                      {/* <TableRow key="os" className={classes.stripedRow}> */}
+                      <TableRow key="os" css={css`backgroundColor: #1a2332;`}>
                         <TableCell component="th" scope="row" align="right">OS:</TableCell>
                         <TableCell align="left">{this.props.targetBox["os"]}</TableCell>
                       </TableRow>
@@ -62,7 +51,8 @@ class TargetBox extends React.Component {
                         <TableCell component="th" scope="row" align="right">Difficulty:</TableCell>
                         <TableCell align="left">{this.props.targetBox["difficulty"]}</TableCell>
                       </TableRow>
-                      <TableRow key="release" className={classes.stripedRow}>
+                      {/* <TableRow key="release" className={classes.stripedRow}> */}
+                      <TableRow key="release" css={css`backgroundColor: #1a2332;`}>
                         <TableCell component="th" scope="row" align="right">Release:</TableCell>
                         <TableCell align="left">{this.props.targetBox["release"]}</TableCell>
                       </TableRow>
@@ -78,4 +68,4 @@ class TargetBox extends React.Component {
   }
 }
 
-export default withStyles(useStyles, { withTheme: true })(TargetBox);
+export default (TargetBox);
