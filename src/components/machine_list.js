@@ -75,7 +75,6 @@ class DataGridDemo extends React.Component {
     super(props);
   }
 
-
   render() {
     return (
       <Box display="flex" alignItems="center" justifyContent="center" pt={3} pb={3}>
