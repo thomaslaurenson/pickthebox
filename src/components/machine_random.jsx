@@ -13,8 +13,8 @@ import {
   FormLabel,
   Checkbox,
   FormHelperText,
-} from "@mui/material"
-import TargetMachine from "./machine_random_target"
+} from "@mui/material";
+import TargetMachine from "./machine_random_target";
 
 class RandomMachines extends React.Component {
   constructor(props) {

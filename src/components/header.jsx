@@ -1,13 +1,8 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  Link,
-} from "@mui/material"
+import { Box, Typography, Link } from "@mui/material";
 
 class Header extends React.Component {
   render() {
-
     return (
       <div>
         <Box display="flex" justifyContent="center" pt={3}>
@@ -20,7 +15,14 @@ class Header extends React.Component {
 
         <Box display="flex" justifyContent="center" pt={3} pb={3} pr={8} pl={8}>
           <Typography variant="body1" component="p">
-            This web app is a simple, 100% client-side application to help you pick a <Link href="https://www.hackthebox.eu" >Hack The Box</Link> machine based on your specified parameters! The <Link href="https://github.com/thomaslaurenson/pickthebox">source code is on GitHub</Link> if you want to review or submit a PR! If you want to support this project, a star on GitHub would be awesome! 
+            This web app is a simple, 100% client-side application to help you
+            pick a <Link href="https://www.hackthebox.eu">Hack The Box</Link>{" "}
+            machine based on your specified parameters! The{" "}
+            <Link href="https://github.com/thomaslaurenson/pickthebox">
+              source code is on GitHub
+            </Link>{" "}
+            if you want to review or submit a PR! If you want to support this
+            project, a star on GitHub would be awesome!
           </Typography>
         </Box>
       </div>
@@ -28,4 +30,4 @@ class Header extends React.Component {
   }
 }
 
-export default (Header);
+export default Header;

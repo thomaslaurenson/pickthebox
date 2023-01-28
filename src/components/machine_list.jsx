@@ -1,6 +1,6 @@
 import * as React from "react";
-import {DataGrid, GridToolbar} from "@mui/x-data-grid";
-import {Box} from "@mui/material"
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { Box } from "@mui/material";
 
 const columns = [
   {
@@ -46,7 +46,8 @@ const columns = [
   {
     field: "oscp_advanced",
     headerName: "OSCP Adv",
-    description: "If the machine is on the Advanced NetSecFocus OSCP-like list.",
+    description:
+      "If the machine is on the Advanced NetSecFocus OSCP-like list.",
     minWidth: 145,
     type: "boolean",
     flex: 1,
@@ -61,7 +62,8 @@ const columns = [
   },
   {
     field: "recommended",
-    headerName: "Recommended", description: "If the machine is recommended.",
+    headerName: "Recommended",
+    description: "If the machine is recommended.",
     minWidth: 145,
     type: "boolean",
     flex: 1,
@@ -75,7 +77,13 @@ class DataGridDemo extends React.Component {
 
   render() {
     return (
-      <Box display="flex" alignItems="center" justifyContent="center" pt={3} pb={3}>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        pt={3}
+        pb={3}
+      >
         <div style={{ height: "65vh", width: "100%" }}>
           <DataGrid
             components={{
@@ -89,8 +97,8 @@ class DataGridDemo extends React.Component {
           />
         </div>
       </Box>
-    )
+    );
   }
 }
 
-export default (DataGridDemo);
+export default DataGridDemo;

@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from '@emotion/react';
+import { css } from "@emotion/react";
 import {
   Grid,
   Box,
@@ -9,7 +9,7 @@ import {
   TableBody,
   TableRow,
   TableCell,
-} from "@mui/material"
+} from "@mui/material";
 
 class TargetBox extends React.Component {
   constructor(props) {
@@ -18,17 +18,22 @@ class TargetBox extends React.Component {
   render() {
     return (
       <React.Fragment>
-
         {/* Target Box Information */}
         {this.props.targetBox ? (
-          <Grid container spacing={2} justifyContent="center" alignItems="center">
-
+          <Grid
+            container
+            spacing={2}
+            justifyContent="center"
+            alignItems="center"
+          >
             {/* Machine avatar */}
             <Grid item xs={12} sm={6}>
               <Box display="flex" justifyContent="center">
                 <img
                   alt={`Icon for ${this.props.targetBox["name"]}`}
-                  src={`data:image/png;base64,${this.props.machineAvatars[this.props.targetBox["id"]]}`}
+                  src={`data:image/png;base64,${
+                    this.props.machineAvatars[this.props.targetBox["id"]]
+                  }`}
                 />
               </Box>
             </Grid>
@@ -40,21 +45,51 @@ class TargetBox extends React.Component {
                   <Table aria-label="target machine">
                     <TableBody>
                       <TableRow key="name">
-                        <TableCell colSpan={2} align="center"><Typography variant="h4" component="h2"><Box display="flex" fontWeight="fontWeightBold"></Box>{this.props.targetBox["name"]}</Typography></TableCell>
+                        <TableCell colSpan={2} align="center">
+                          <Typography variant="h4" component="h2">
+                            <Box
+                              display="flex"
+                              fontWeight="fontWeightBold"
+                            ></Box>
+                            {this.props.targetBox["name"]}
+                          </Typography>
+                        </TableCell>
                       </TableRow>
                       {/* <TableRow key="os" className={classes.stripedRow}> */}
-                      <TableRow key="os" css={css`backgroundColor: #1a2332;`}>
-                        <TableCell component="th" scope="row" align="right">OS:</TableCell>
-                        <TableCell align="left">{this.props.targetBox["os"]}</TableCell>
+                      <TableRow
+                        key="os"
+                        css={css`
+                          backgroundcolor: #1a2332;
+                        `}
+                      >
+                        <TableCell component="th" scope="row" align="right">
+                          OS:
+                        </TableCell>
+                        <TableCell align="left">
+                          {this.props.targetBox["os"]}
+                        </TableCell>
                       </TableRow>
                       <TableRow key="difficulty">
-                        <TableCell component="th" scope="row" align="right">Difficulty:</TableCell>
-                        <TableCell align="left">{this.props.targetBox["difficulty"]}</TableCell>
+                        <TableCell component="th" scope="row" align="right">
+                          Difficulty:
+                        </TableCell>
+                        <TableCell align="left">
+                          {this.props.targetBox["difficulty"]}
+                        </TableCell>
                       </TableRow>
                       {/* <TableRow key="release" className={classes.stripedRow}> */}
-                      <TableRow key="release" css={css`backgroundColor: #1a2332;`}>
-                        <TableCell component="th" scope="row" align="right">Release:</TableCell>
-                        <TableCell align="left">{this.props.targetBox["release"]}</TableCell>
+                      <TableRow
+                        key="release"
+                        css={css`
+                          backgroundcolor: #1a2332;
+                        `}
+                      >
+                        <TableCell component="th" scope="row" align="right">
+                          Release:
+                        </TableCell>
+                        <TableCell align="left">
+                          {this.props.targetBox["release"]}
+                        </TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
@@ -62,10 +97,12 @@ class TargetBox extends React.Component {
               </Box>
             </Grid>
           </Grid>
-        ) : ("")}
+        ) : (
+          ""
+        )}
       </React.Fragment>
     );
   }
 }
 
-export default (TargetBox);
+export default TargetBox;
