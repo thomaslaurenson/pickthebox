@@ -1,5 +1,6 @@
-import React from "react";
-import { css } from "@emotion/react";
+import React from 'react';
+import {css} from '@emotion/react';
+import PropTypes from 'prop-types';
 import {
   Grid,
   Box,
@@ -9,7 +10,7 @@ import {
   TableBody,
   TableRow,
   TableCell,
-} from "@mui/material";
+} from '@mui/material';
 
 class TargetBox extends React.Component {
   constructor(props) {
@@ -30,9 +31,9 @@ class TargetBox extends React.Component {
             <Grid item xs={12} sm={6}>
               <Box display="flex" justifyContent="center">
                 <img
-                  alt={`Icon for ${this.props.targetBox["name"]}`}
+                  alt={`Icon for ${this.props.targetBox['name']}`}
                   src={`data:image/png;base64,${
-                    this.props.machineAvatars[this.props.targetBox["id"]]
+                    this.props.machineAvatars[this.props.targetBox['id']]
                   }`}
                 />
               </Box>
@@ -51,7 +52,7 @@ class TargetBox extends React.Component {
                               display="flex"
                               fontWeight="fontWeightBold"
                             ></Box>
-                            {this.props.targetBox["name"]}
+                            {this.props.targetBox['name']}
                           </Typography>
                         </TableCell>
                       </TableRow>
@@ -66,7 +67,7 @@ class TargetBox extends React.Component {
                           OS:
                         </TableCell>
                         <TableCell align="left">
-                          {this.props.targetBox["os"]}
+                          {this.props.targetBox['os']}
                         </TableCell>
                       </TableRow>
                       <TableRow key="difficulty">
@@ -74,10 +75,9 @@ class TargetBox extends React.Component {
                           Difficulty:
                         </TableCell>
                         <TableCell align="left">
-                          {this.props.targetBox["difficulty"]}
+                          {this.props.targetBox['difficulty']}
                         </TableCell>
                       </TableRow>
-                      {/* <TableRow key="release" className={classes.stripedRow}> */}
                       <TableRow
                         key="release"
                         css={css`
@@ -88,7 +88,7 @@ class TargetBox extends React.Component {
                           Release:
                         </TableCell>
                         <TableCell align="left">
-                          {this.props.targetBox["release"]}
+                          {this.props.targetBox['release']}
                         </TableCell>
                       </TableRow>
                     </TableBody>
@@ -98,11 +98,16 @@ class TargetBox extends React.Component {
             </Grid>
           </Grid>
         ) : (
-          ""
+          ''
         )}
       </React.Fragment>
     );
   }
 }
+
+TargetBox.propTypes = {
+  targetBox: PropTypes.object,
+  machineAvatars: PropTypes.object,
+};
 
 export default TargetBox;

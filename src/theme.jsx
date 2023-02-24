@@ -1,30 +1,30 @@
-import { createTheme } from "@mui/material/styles";
-import "@fontsource/roboto";
+import {createTheme} from '@mui/material/styles';
+import '@fontsource/roboto';
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
+    mode: 'dark',
     primary: {
-      main: "#9fef00",
+      main: '#9fef00',
     },
     secondary: {
-      main: "#ff0000",
+      main: '#ff0000',
     },
   },
   typography: {
-    fontFamily: ["Roboto", "serif", "monospace"].join(","),
+    fontFamily: ['Roboto', 'serif', 'monospace'].join(','),
   },
   components: {
     // Override color of tabs to select from List or Random
     MuiTab: {
       styleOverrides: {
         wrapper: {
-          color: "#fff",
+          color: '#fff',
         },
         root: {
-          background: "#1a2332",
-          "&:hover": {
-            backgroundColor: "#141d2b",
+          'background': '#1a2332',
+          '&:hover': {
+            backgroundColor: '#141d2b',
           },
         },
       },
@@ -32,9 +32,9 @@ const theme = createTheme({
     MuiFormLabel: {
       styleOverrides: {
         root: {
-          color: "#fff",
-          "&$focused": {
-            color: "#fff",
+          'color': '#fff',
+          '&$focused': {
+            color: '#fff',
           },
         },
       },

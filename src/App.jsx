@@ -1,7 +1,7 @@
-import React from "react";
-import axios from "axios";
-import PropTypes from "prop-types";
-import { css } from '@emotion/react';
+import React from 'react';
+import axios from 'axios';
+import PropTypes from 'prop-types';
+import {css} from '@emotion/react';
 import {
   CssBaseline,
   Container,
@@ -11,15 +11,15 @@ import {
   AppBar,
   Tabs,
   Tab,
-} from "@mui/material"
-import { ThemeProvider } from '@mui/material/styles';
+} from '@mui/material';
+import {ThemeProvider} from '@mui/material/styles';
 import theme from './theme';
-import Header from "./components/header"
-import RandomMachines from "./components/machine_random"
-import DataGridDemo from "./components/machine_list"
+import Header from './components/header';
+import RandomMachines from './components/machine_random';
+import DataGridDemo from './components/machine_list';
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const {children, value, index, ...other} = props;
 
   return (
     <div
@@ -29,11 +29,7 @@ function TabPanel(props) {
       aria-labelledby={`tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box>{children}</Box>}
     </div>
   );
 }
@@ -46,8 +42,8 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `tab-${index}`,
-    "aria-controls": `tabpanel-${index}`,
+    'id': `tab-${index}`,
+    'aria-controls': `tabpanel-${index}`,
   };
 }
 
@@ -66,56 +62,65 @@ class App extends React.Component {
       machineTypesIcons: null,
       // Selected tab index
       value: 0,
-    }
+    };
   }
 
   handleChange = (event, newValue) => {
-    this.setState({ value: newValue });
+    this.setState({value: newValue});
   };
 
   async componentDidMount() {
-    const URLs = ["machines_data.json", "machines_avatars.json", "machines_types.json"];
-    const requests = URLs.map(URL => axios.get(URL).catch());
+    const URLs = [
+      'machines_data.json',
+      'machines_avatars.json',
+      'machines_types.json',
+    ];
+    const requests = URLs.map((URL) => axios.get(URL).catch());
 
     try {
-      const [machineData, machineAvatars, machineTypesIcons] = await axios.all(requests);
-      this.setState({ machineData: machineData.data });
-      this.setState({ machineAvatars: machineAvatars.data });
-      this.setState({ machineTypesIcons: machineTypesIcons.data });
-    }
-    catch (err) {
+      const [machineData, machineAvatars, machineTypesIcons] = await axios.all(
+          requests,
+      );
+      this.setState({machineData: machineData.data});
+      this.setState({machineAvatars: machineAvatars.data});
+      this.setState({machineTypesIcons: machineTypesIcons.data});
+    } catch (err) {
       console.log(err.message);
     }
-    this.setState({ loading: false });
+    this.setState({loading: false});
   }
 
   render() {
     if (this.state.loading) {
       return (
-        <Container css={css`
-          display: flex;
-          minHeight: 100vh;
-          backgroundColor: #141d2b;
-        `}>
+        <Container
+          css={css`
+            display: flex;
+            minheight: 100vh;
+            backgroundcolor: #141d2b;
+          `}
+        >
           <ThemeProvider theme={theme}>
             <React.Fragment>
               <CssBaseline />
               <Grid container justifyContent="center" alignItems="center">
-                <Box display="flex" >
+                <Box display="flex">
                   <CircularProgress />
                 </Box>
               </Grid>
             </React.Fragment>
           </ThemeProvider>
         </Container>
-      )
+      );
     } else {
       return (
-        <Container css={css`
-          display: flex;
-          minHeight: 100vh;
-          backgroundColor: #141d2b;
-        `}>
+        <Container
+          css={css`
+            display: flex;
+            minheight: 100vh;
+            backgroundcolor: #141d2b;
+          `}
+        >
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Container maxWidth="lg">
@@ -134,10 +139,22 @@ class App extends React.Component {
                   <Tab label="List" {...a11yProps(1)} />
                 </Tabs>
               </AppBar>
-              <TabPanel value={this.state.value} index={0} dir={theme.direction}>
-                <RandomMachines machineData={this.state.machineData} machineAvatars={this.state.machineAvatars} machineTypesIcons={this.state.machineTypesIcons} />
+              <TabPanel
+                value={this.state.value}
+                index={0}
+                dir={theme.direction}
+              >
+                <RandomMachines
+                  machineData={this.state.machineData}
+                  machineAvatars={this.state.machineAvatars}
+                  machineTypesIcons={this.state.machineTypesIcons}
+                />
               </TabPanel>
-              <TabPanel value={this.state.value} index={1} dir={theme.direction}>
+              <TabPanel
+                value={this.state.value}
+                index={1}
+                dir={theme.direction}
+              >
                 <DataGridDemo machineData={this.state.machineData} />
               </TabPanel>
             </Container>
@@ -148,4 +165,4 @@ class App extends React.Component {
   }
 }
 
-export default (App);
+export default App;
