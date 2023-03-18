@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import {css} from '@emotion/react';
 import {
   CssBaseline,
   Container,
@@ -94,16 +93,20 @@ class App extends React.Component {
     if (this.state.loading) {
       return (
         <Container
-          css={css`
-            display: flex;
-            minheight: 100vh;
-            backgroundcolor: #141d2b;
-          `}
+          sx={{
+            minHeight: '100vh',
+            backgroundColor: '#141d2b',
+          }}
         >
           <ThemeProvider theme={theme}>
             <React.Fragment>
               <CssBaseline />
-              <Grid container justifyContent="center" alignItems="center">
+              <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                sx={{minHeight: '100vh'}}
+              >
                 <Box display="flex">
                   <CircularProgress />
                 </Box>
@@ -115,11 +118,10 @@ class App extends React.Component {
     } else {
       return (
         <Container
-          css={css`
-            display: flex;
-            minheight: 100vh;
-            backgroundcolor: #141d2b;
-          `}
+          sx={{
+            minHeight: '100vh',
+            backgroundColor: '#141d2b',
+          }}
         >
           <ThemeProvider theme={theme}>
             <CssBaseline />

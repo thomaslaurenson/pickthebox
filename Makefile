@@ -1,17 +1,17 @@
 run:
-    npm run dev
+	npm run dev
 
 build:
-    npm run build
+	npm run build
 
 install:
-    npm install
+	npm install
 
 update:
-    npx npm-check -u
+	npx npm-check -u
 
 lint:
-    npm run lint
+	npm run lint
 
 lint_fix:
-    npm run lint_fix
+	npm run lint_fix
