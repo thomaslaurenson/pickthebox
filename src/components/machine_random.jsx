@@ -262,7 +262,7 @@ class RandomMachines extends React.Component {
 }
 
 RandomMachines.propTypes = {
-  machineData: PropTypes.object,
+  machineData: PropTypes.array,
   machineAvatars: PropTypes.object,
   machineTypesIcons: PropTypes.object,
 };

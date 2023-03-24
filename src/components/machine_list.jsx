@@ -33,8 +33,9 @@ const columns = [
     headerName: 'Release',
     description: 'The machine release date.',
     minWidth: 130,
-    type: 'dateTime',
+    type: 'date',
     flex: 1,
+    valueGetter: ({value}) => value && new Date(value),
   },
   {
     field: 'oscp_normal',
@@ -103,7 +104,7 @@ class DataGridDemo extends React.Component {
 }
 
 DataGridDemo.propTypes = {
-  machineData: PropTypes.object,
+  machineData: PropTypes.array,
 };
 
 export default DataGridDemo;
