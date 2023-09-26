@@ -1,5 +1,7 @@
 import {createTheme} from '@mui/material/styles';
-import '@fontsource/roboto';
+import '@fontsource/montserrat';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/montserrat/400.css';
 
 const theme = createTheme({
   palette: {
@@ -12,9 +14,19 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ['Roboto', 'serif', 'monospace'].join(','),
+    h2: {
+      fontWeight: 700,
+    },
+    h4: {
+      fontWeight: 400,
+    },
   },
   components: {
+    MuiTypography: {
+      defaultProps: {
+        fontFamily: 'Montserrat',
+      },
+    },
     // Override color of tabs to select from List or Random
     MuiTab: {
       styleOverrides: {

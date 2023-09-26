@@ -32,8 +32,8 @@ class TargetBox extends React.Component {
               <Box display="flex" justifyContent="center">
                 <img
                   alt={`Icon for ${this.props.targetBox['name']}`}
-                  src={`data:image/png;base64,${
-                    this.props.machineAvatars[this.props.targetBox['id']]
+                  // eslint-disable-next-line max-len
+                  src={`data:image/png;base64,${this.props.machineAvatars[this.props.targetBox['id']]
                   }`}
                 />
               </Box>
@@ -47,7 +47,7 @@ class TargetBox extends React.Component {
                     <TableBody>
                       <TableRow key="name">
                         <TableCell colSpan={2} align="center">
-                          <Typography variant="h4" component="h2">
+                          <Typography variant="h4" component="h4">
                             <Box
                               display="flex"
                               fontWeight="fontWeightBold"
@@ -64,18 +64,20 @@ class TargetBox extends React.Component {
                         `}
                       >
                         <TableCell component="th" scope="row" align="right">
-                          OS:
+                          <Typography>OS:</Typography>
                         </TableCell>
                         <TableCell align="left">
-                          {this.props.targetBox['os']}
+                          <Typography>{this.props.targetBox['os']}</Typography>
                         </TableCell>
                       </TableRow>
                       <TableRow key="difficulty">
                         <TableCell component="th" scope="row" align="right">
-                          Difficulty:
+                          <Typography>Difficulty:</Typography>
                         </TableCell>
                         <TableCell align="left">
-                          {this.props.targetBox['difficulty']}
+                          <Typography>
+                            {this.props.targetBox['difficulty']}
+                          </Typography>
                         </TableCell>
                       </TableRow>
                       <TableRow
@@ -85,10 +87,12 @@ class TargetBox extends React.Component {
                         `}
                       >
                         <TableCell component="th" scope="row" align="right">
-                          Release:
+                          <Typography>Release:</Typography>
                         </TableCell>
                         <TableCell align="left">
-                          {this.props.targetBox['release']}
+                          <Typography>
+                            {this.props.targetBox['release']}
+                          </Typography>
                         </TableCell>
                       </TableRow>
                     </TableBody>
