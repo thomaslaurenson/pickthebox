@@ -1,5 +1,29 @@
 [
     {
+        "id": 582,
+        "name": "Bizness",
+        "os": "Linux",
+        "release": "2024-01-06",
+        "difficulty": "Easy",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 581,
+        "name": "Corporate",
+        "os": "Linux",
+        "release": "2023-12-16",
+        "difficulty": "Insane",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
         "id": 580,
         "name": "Surveillance",
         "os": "Linux",
@@ -221,7 +245,7 @@
         "os": "Linux",
         "release": "2023-08-19",
         "difficulty": "Hard",
-        "free": true,
+        "free": false,
         "recommended": false,
         "retired": true,
         "oscp_normal": false,
@@ -281,7 +305,7 @@
         "os": "Windows",
         "release": "2023-07-15",
         "difficulty": "Medium",
-        "free": true,
+        "free": false,
         "recommended": false,
         "retired": true,
         "oscp_normal": false,
@@ -295,7 +319,7 @@
         "difficulty": "Easy",
         "free": true,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
     },
@@ -475,7 +499,7 @@
         "difficulty": "Insane",
         "free": true,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
     },
@@ -2569,7 +2593,7 @@
     },
     {
         "id": 233,
-        "name": "Traceback",
+        "name": "TraceBack",
         "os": "Linux",
         "release": "2020-03-14",
         "difficulty": "Easy",
@@ -3445,7 +3469,7 @@
     },
     {
         "id": 154,
-        "name": "Ypuffy",
+        "name": "YPuffy",
         "os": "Other",
         "release": "2018-09-15",
         "difficulty": "Medium",
