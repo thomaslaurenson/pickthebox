@@ -1,5 +1,53 @@
 [
     {
+        "id": 586,
+        "name": "Skyfall",
+        "os": "Linux",
+        "release": "2024-02-03",
+        "difficulty": "Insane",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 585,
+        "name": "Pov",
+        "os": "Windows",
+        "release": "2024-01-27",
+        "difficulty": "Medium",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 584,
+        "name": "Analysis",
+        "os": "Windows",
+        "release": "2024-01-20",
+        "difficulty": "Hard",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
+        "id": 583,
+        "name": "Monitored",
+        "os": "Linux",
+        "release": "2024-01-13",
+        "difficulty": "Medium",
+        "free": true,
+        "recommended": false,
+        "retired": false,
+        "oscp_normal": false,
+        "oscp_advanced": false
+    },
+    {
         "id": 582,
         "name": "Bizness",
         "os": "Linux",
@@ -187,7 +235,7 @@
         "difficulty": "Medium",
         "free": true,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
     },
@@ -233,9 +281,9 @@
         "os": "Linux",
         "release": "2023-08-26",
         "difficulty": "Medium",
-        "free": true,
+        "free": false,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
     },
@@ -295,7 +343,7 @@
         "difficulty": "Insane",
         "free": true,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
     },
@@ -306,7 +354,7 @@
         "release": "2023-07-15",
         "difficulty": "Medium",
         "free": false,
-        "recommended": false,
+        "recommended": true,
         "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
@@ -317,7 +365,7 @@
         "os": "Linux",
         "release": "2023-07-08",
         "difficulty": "Easy",
-        "free": true,
+        "free": false,
         "recommended": false,
         "retired": true,
         "oscp_normal": false,
@@ -401,9 +449,9 @@
         "os": "Linux",
         "release": "2023-05-27",
         "difficulty": "Insane",
-        "free": true,
+        "free": false,
         "recommended": false,
-        "retired": false,
+        "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
     },
@@ -497,7 +545,7 @@
         "os": "Windows",
         "release": "2023-04-01",
         "difficulty": "Insane",
-        "free": true,
+        "free": false,
         "recommended": false,
         "retired": true,
         "oscp_normal": false,
@@ -906,7 +954,7 @@
         "release": "2022-07-30",
         "difficulty": "Easy",
         "free": false,
-        "recommended": false,
+        "recommended": true,
         "retired": true,
         "oscp_normal": true,
         "oscp_advanced": false
@@ -1885,7 +1933,7 @@
     },
     {
         "id": 345,
-        "name": "pivotapi",
+        "name": "PivotAPI",
         "os": "Windows",
         "release": "2021-05-08",
         "difficulty": "Insane",
@@ -1893,7 +1941,7 @@
         "recommended": false,
         "retired": true,
         "oscp_normal": false,
-        "oscp_advanced": false
+        "oscp_advanced": true
     },
     {
         "id": 344,
@@ -2622,7 +2670,7 @@
         "release": "2020-02-29",
         "difficulty": "Hard",
         "free": false,
-        "recommended": true,
+        "recommended": false,
         "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
@@ -2658,7 +2706,7 @@
         "release": "2020-02-08",
         "difficulty": "Insane",
         "free": false,
-        "recommended": true,
+        "recommended": false,
         "retired": true,
         "oscp_normal": false,
         "oscp_advanced": false
