@@ -11,25 +11,25 @@
     "lint_fix": "eslint src --ext .js,.jsx --fix"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/montserrat": "^5.0.16",
-    "@fontsource/roboto": "^5.0.8",
-    "@mui/material": "^5.15.7",
-    "@mui/x-data-grid": "^6.19.3",
-    "axios": "^1.6.7",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource/montserrat": "^5.2.8",
+    "@fontsource/roboto": "^5.2.9",
+    "@mui/material": "^7.3.7",
+    "@mui/x-data-grid": "^8.24.0",
+    "axios": "^1.13.2",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.56.0",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.39.2",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.33.2",
-    "prettier": "^3.2.5",
-    "vite": "^5.0.12"
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^3.7.4",
+    "vite": "^7.3.1"
   }
 }
